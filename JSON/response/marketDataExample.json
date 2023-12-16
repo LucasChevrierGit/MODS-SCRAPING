@@ -1,0 +1,450 @@
+{
+    "data": {
+        "product": {
+            "id": "990e8bca-1397-4593-a9ac-f0d7a9323806",
+            "urlKey": "adidas-yeezy-slide-slate-grey",
+            "listingType": "STANDARD",
+            "title": "adidas Yeezy Slide Slate Grey",
+            "uuid": "990e8bca-1397-4593-a9ac-f0d7a9323806",
+            "contentGroup": "sneakers",
+            "market": {
+                "state": {
+                    "lowestAsk": {
+                        "amount": 70
+                    },
+                    "highestBid": {
+                        "amount": 93
+                    },
+                    "numberOfCustodialAsks": 0,
+                    "numberOfAsks": 4027,
+                    "numberOfBids": 493,
+                    "lowestCustodialAsk": None
+                },
+                "salesInformation": {
+                    "lastSale": 79,
+                    "salesLast72Hours": 2698
+                },
+                "statistics": {
+                    "lastSale": {
+                        "amount": 79,
+                        "changePercentage": 0,
+                        "changeValue": 0,
+                        "sameFees": None
+                    }
+                }
+            },
+            "variants": [
+                {
+                    "id": "a5636afd-2247-421c-b9f2-148556c263a9",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 75
+                            },
+                            "highestBid": {
+                                "amount": 48
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 171,
+                            "numberOfBids": 10,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 78,
+                            "salesLast72Hours": 90
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 78,
+                                "changePercentage": 0,
+                                "changeValue": 0,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "44d683ee-85ee-4086-8a5f-5225ac72bb33",
+                    "market": {
+                        "state": {
+                            "lowestAsk": None,
+                            "highestBid": None,
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 0,
+                            "numberOfBids": 0,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 0,
+                            "salesLast72Hours": 0
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 0,
+                                "changePercentage": None,
+                                "changeValue": 0,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "01bc2c46-c791-45d9-b654-6340cd083890",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 74
+                            },
+                            "highestBid": {
+                                "amount": 62
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 210,
+                            "numberOfBids": 15,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 102,
+                            "salesLast72Hours": 172
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 102,
+                                "changePercentage": 0.316327,
+                                "changeValue": 25,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "7ce817a6-88ee-40ec-b4be-c0adc04b19e3",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 88
+                            },
+                            "highestBid": {
+                                "amount": 78
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 102,
+                            "numberOfBids": 23,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 97,
+                            "salesLast72Hours": 138
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 97,
+                                "changePercentage": 0,
+                                "changeValue": 0,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "fcfaa7ac-236e-469c-849b-40c7bd1c47cf",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 84
+                            },
+                            "highestBid": {
+                                "amount": 73
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 168,
+                            "numberOfBids": 42,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 91,
+                            "salesLast72Hours": 278
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 91,
+                                "changePercentage": 0.017699,
+                                "changeValue": 2,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "47532b1d-fbbe-4c1d-8eb1-abb222510740",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 71
+                            },
+                            "highestBid": {
+                                "amount": 62
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 636,
+                            "numberOfBids": 65,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 79,
+                            "salesLast72Hours": 326
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 79,
+                                "changePercentage": 0,
+                                "changeValue": 0,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "c712ec67-12ac-4c5c-95e7-b896565f246a",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 70
+                            },
+                            "highestBid": {
+                                "amount": 60
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 988,
+                            "numberOfBids": 69,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 78,
+                            "salesLast72Hours": 463
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 78,
+                                "changePercentage": 0,
+                                "changeValue": 0,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "a8349dc0-770b-46ac-83b9-55bd65824b51",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 73
+                            },
+                            "highestBid": {
+                                "amount": 60
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 893,
+                            "numberOfBids": 102,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 78,
+                            "salesLast72Hours": 646
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 78,
+                                "changePercentage": -0.066667,
+                                "changeValue": -5,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "cbf9c2a4-b43a-4ea5-8904-dbb5f59b5df9",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 96
+                            },
+                            "highestBid": {
+                                "amount": 90
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 465,
+                            "numberOfBids": 66,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 107,
+                            "salesLast72Hours": 294
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 107,
+                                "changePercentage": 0,
+                                "changeValue": 0,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "03b00a31-4adc-40d0-823e-422381cb97ef",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 110
+                            },
+                            "highestBid": {
+                                "amount": 93
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 202,
+                            "numberOfBids": 41,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 142,
+                            "salesLast72Hours": 156
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 142,
+                                "changePercentage": 0.258741,
+                                "changeValue": 30,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "2c9b1e87-264a-47cb-87ea-0255c63db5ca",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 104
+                            },
+                            "highestBid": {
+                                "amount": 85
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 113,
+                            "numberOfBids": 34,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 111,
+                            "salesLast72Hours": 90
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 111,
+                                "changePercentage": -0.014085,
+                                "changeValue": -1,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "736569ed-21fb-47d1-9f8a-099cbc141d04",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 105
+                            },
+                            "highestBid": {
+                                "amount": 69
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 40,
+                            "numberOfBids": 7,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 140,
+                            "salesLast72Hours": 33
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 140,
+                                "changePercentage": 0,
+                                "changeValue": 0,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "8bf94b64-c1b0-4bf4-bd42-e97dd8ed0f8d",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 110
+                            },
+                            "highestBid": {
+                                "amount": 68
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 27,
+                            "numberOfBids": 11,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 112,
+                            "salesLast72Hours": 13
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 112,
+                                "changePercentage": 0.028986,
+                                "changeValue": 4,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                },
+                {
+                    "id": "453b8628-0932-4759-a63b-0c003444ce3b",
+                    "market": {
+                        "state": {
+                            "lowestAsk": {
+                                "amount": 149
+                            },
+                            "highestBid": {
+                                "amount": 76
+                            },
+                            "numberOfCustodialAsks": 0,
+                            "numberOfAsks": 12,
+                            "numberOfBids": 8,
+                            "lowestCustodialAsk": None
+                        },
+                        "salesInformation": {
+                            "lastSale": 119,
+                            "salesLast72Hours": 5
+                        },
+                        "statistics": {
+                            "lastSale": {
+                                "amount": 119,
+                                "changePercentage": 0.06383,
+                                "changeValue": 8,
+                                "sameFees": None
+                            }
+                        }
+                    }
+                }
+            ],
+            "sizeDescriptor": "Size",
+            "productCategory": "sneakers",
+            "media": {
+                "imageUrl": "https://images.stockx.com/images/adidas-Yeezy-Slide-Slate-Grey-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1673938237"
+            },
+            "lockBuying": false,
+            "lockSelling": false,
+            "minimumBid": 20
+        }
+    }
+}

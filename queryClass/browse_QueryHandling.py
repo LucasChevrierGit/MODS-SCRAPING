@@ -8,8 +8,6 @@ from queryHandling import QueryHandling
 class BrowseQueryHandling(QueryHandling) :
     def __init__(self) :        
         super().__init__("Browse.json")
-        self.size = 1
-        self.page = 1
         self.productsId = None
     
     def getProductsId(self):
@@ -17,14 +15,12 @@ class BrowseQueryHandling(QueryHandling) :
             self.getResponse()
         data = self.getResponse()['data']['browse']['results']['edges']
 
-        self.productsId = [data[i]['node']['urlKey'] for i in range(self.size)]
+        self.productsId = [data[i]['node']['urlKey'] for i in range(self.data['variables']['page']['limit'])]
         return self.productsId
         
-
     def setSearch(self, search, size=1, currency="GB", country="GDP") :
-        self.variables['query'] = search
-        self.variables['page']['limit'] = size
-        self.size = size
+        self.data['variables']['query'] = search
+        self.data['variables']['page']['limit'] = size
 
     def writeProductId(self, categoryName):
         with open("PRODUCT_ID/" + categoryName + ".json", 'w') as file:

@@ -8,10 +8,8 @@ class QueryHandling :
             self.cookies = self.json_data['cookies']
             self.headers = self.json_data['headers']
             self.data = self.json_data['data']
-            self.variables = self.data['variables']
-            self.compressed = self.json_data['compressed']
+
             self.url = self.json_data['url']
-            self.method = self.json_data['method']
             self.operationName = self.data['operationName']
             self.response = None
             
@@ -26,8 +24,22 @@ class QueryHandling :
             self.response = requests.post(self.url, cookies=self.cookies, headers=self.headers, json=self.data)
             print(self.operationName + " query, status code :",self.response.status_code)
             if(self.response.status_code == 200):
-                return self.response.json()
+                self.response = self.response.json()
+                return self.response
             else:
                 raise Exception(" Wrong status code, might be a problem with the authorization variable in headers")
             
-        return self.response.json()
+        return self.response
+    
+    def setResponse(self) :
+        self.response = requests.post(self.url, cookies=self.cookies, headers=self.headers, json=self.data)
+        print(self.operationName + " query, status code :",self.response.status_code)
+        if(self.response.status_code == 200):
+            self.response = self.response.json()
+        else:
+            raise Exception(" Wrong status code, might be a problem with the authorization variable in headers")
+        
+    
+    def changeHeadersId(self, device_id, session_id):
+        self.headers['x-stockx-device-id'] = device_id
+        self.headers['x-stockx-session-id'] = session_id

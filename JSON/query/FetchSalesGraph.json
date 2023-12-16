@@ -12,11 +12,9 @@
         "apollographql-client-version": "2023.12.10.00",
         "app-platform": "Iron",
         "app-version": "2023.12.10.00",
-        "authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5USkNNVVEyUmpBd1JUQXdORFk0TURRelF6SkZRelV4TWpneU5qSTNNRFJGTkRZME0wSTNSQSJ9.eyJodHRwczovL3N0b2NreC5jb20vY3VzdG9tZXJfdXVpZCI6ImRmNzcxYmYxLWViNjctMTFlOC04YWQzLTBhOTM4YjE4OTNhZSIsImh0dHBzOi8vc3RvY2t4LmNvbS9nYV9ldmVudCI6IkxvZ2dlZCBJbiIsImh0dHBzOi8vc3RvY2t4LmNvbS9lbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50cy5zdG9ja3guY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTA0MjkyNzcwNTgwNTc4NzcwOTc0IiwiYXVkIjpbImdhdGV3YXkuc3RvY2t4LmNvbSIsImh0dHBzOi8vc3RvY2t4LXByb2Quc3RvY2t4LXByb2QuYXV0aDBhcHAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTcwMjU2MTUzMiwiZXhwIjoxNzAyNjA0NzMyLCJhenAiOiJPVnhydDRWSnFUeDdMSVVLZDY2MVcwRHVWTXBjRkJ5RCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUifQ.mXm10po1Bv3Eqp5VcnOgdUTZwYNUG18n_jtkj2V8gxJbCw2fzO_NBX-bXCGxfQ7ybURUMRUWSq1Q5AR9o4nLA2wQBpUa5P2FDQiLNhr2Kd9OwfRcRgUi1lqKKamlKejCZMBO5ZjZaBG2-NnAp5GSAHvdeUws2eV4H2JlwmQmPjewfbduDkUXlcNB0eNukViVt3S_RQabn1o5hfYTa4GQLIFFpgOq6CNaVgnQ8qWNaIYdK8v8sIpe25rwHU5yG8IQO_9arubk52hhAlQP4zG9aikI75JItiXSafeaehAPKE0_6001Sl4V7VSY8x268VyOh5fOLhNcB1vGe7VeURf8HQ",
         "content-type": "application/json",
         "dnt": "1",
         "origin": "https://stockx.com",
-        "referer": "https://stockx.com/adidas-yeezy-slide-slate-grey",
         "sec-ch-ua": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"",
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": "\"Windows\"",
@@ -27,7 +25,7 @@
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "x-operation-name": "FetchSalesGraph",
         "x-stockx-device-id": "14bdd41f-f2d3-4f59-8d4e-633b685771ee",
-        "x-stockx-session-id": "37dd0c42-03a3-4f05-85b8-33fb75a7b814"
+        "x-stockx-session-id": "d637e4fb-5520-45b5-bc6c-392b1f8ca262"
     },
     "data": {
         "query": "query FetchSalesGraph($productId: String!, $currencyCode: CurrencyCode, $intervals: Int, $startDate: String, $endDate: String, $isVariant: Boolean! = false) {\n  variant(id: $productId) @include(if: $isVariant) {\n    id\n    salesChart(\n      currencyCode: $currencyCode\n      intervals: $intervals\n      startDate: $startDate\n      endDate: $endDate\n    ) {\n      ...SalesGraph\n    }\n  }\n  product(id: $productId) @skip(if: $isVariant) {\n    id\n    title\n    productCategory\n    salesChart(\n      currencyCode: $currencyCode\n      intervals: $intervals\n      startDate: $startDate\n      endDate: $endDate\n    ) {\n      ...SalesGraph\n    }\n  }\n}\n\nfragment SalesGraph on SalesChart {\n  series {\n    xValue\n    yValue\n  }\n}",
