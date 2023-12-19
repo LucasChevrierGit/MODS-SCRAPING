@@ -24,8 +24,8 @@
         "selected-country": "FR",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "x-operation-name": "FetchSalesGraph",
-        "x-stockx-device-id": "14bdd41f-f2d3-4f59-8d4e-633b685771ee",
-        "x-stockx-session-id": "d637e4fb-5520-45b5-bc6c-392b1f8ca262"
+        "x-stockx-device-id": "08ea463b-cd2e-4684-a3d5-73db39ae0fd8",
+        "x-stockx-session-id": "e45e10fb-d3d7-4bac-a456-4f07ecdfe83a"
     },
     "data": {
         "query": "query FetchSalesGraph($productId: String!, $currencyCode: CurrencyCode, $intervals: Int, $startDate: String, $endDate: String, $isVariant: Boolean! = false) {\n  variant(id: $productId) @include(if: $isVariant) {\n    id\n    salesChart(\n      currencyCode: $currencyCode\n      intervals: $intervals\n      startDate: $startDate\n      endDate: $endDate\n    ) {\n      ...SalesGraph\n    }\n  }\n  product(id: $productId) @skip(if: $isVariant) {\n    id\n    title\n    productCategory\n    salesChart(\n      currencyCode: $currencyCode\n      intervals: $intervals\n      startDate: $startDate\n      endDate: $endDate\n    ) {\n      ...SalesGraph\n    }\n  }\n}\n\nfragment SalesGraph on SalesChart {\n  series {\n    xValue\n    yValue\n  }\n}",
@@ -39,5 +39,5 @@
         },
         "operationName": "FetchSalesGraph"
     },
-    "compressed": true
+    "compressed": false
 }

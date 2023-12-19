@@ -1,12 +1,11 @@
-from queryHandling import QueryHandling
+from queryClass.queryHandling import QueryHandling
 import sys
 
-class getMarketData_QueryHandling(QueryHandling) :
+class GetMarketData_QueryHandling(QueryHandling) :
     def __init__(self, productId) :        
         super().__init__("getMarketData.json")
-        self.data['variables']['productsId'] = productId
-        self.response = None
-        self.marketData = None
+        self.data['variables']['id'] = productId
+
 
         """
         "variables": {
@@ -19,7 +18,7 @@ class getMarketData_QueryHandling(QueryHandling) :
 
 
 def main(args):
-    marketData = getMarketData_QueryHandling("adidas-yeezy-slide-slate-grey")
+    marketData = GetMarketData_QueryHandling("adidas-yeezy-slide-slate-grey")
     print(marketData.getResponse())
 if __name__ == '__main__':
     args = sys.argv[1:]

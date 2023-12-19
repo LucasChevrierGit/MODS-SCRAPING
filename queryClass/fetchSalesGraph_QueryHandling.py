@@ -4,8 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-from queryHandling import QueryHandling
-from browse_QueryHandling import BrowseQueryHandling
+from queryClass.queryHandling import QueryHandling
+
 """
 "productId": "adidas-yeezy-slide-slate-grey",
 "startDate": "2022-12-14",
@@ -39,10 +39,16 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
         self.data['variables']['endDate'] = endDate
         self.data['variables']['intervals'] = intervals
 
+    def setCurreny(self, currencyCode = "USD"):
+        self.data['variables']['currencyCode'] = currencyCode
+
     def responseAsPd(self):
         series = self.getResponse()['data']['product']['salesChart']['series']
+
         self.salesGraph = pd.DataFrame(series)
-        self.salesGraph['xValue'] = pd.to_datetime(self.salesGraph['xValue'])
+        self.salesGraph = self.salesGraph.rename(columns={'xValue': 'Date', 'yValue': 'Price (' + str(self.data['variables']['currencyCode']) + ')'})
+        self.salesGraph['Date'] = pd.to_datetime(self.salesGraph['Date'])
+        self.salesGraph.set_index('Date', inplace=True)
         return self.salesGraph
     
 

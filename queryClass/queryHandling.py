@@ -14,10 +14,9 @@ class QueryHandling :
             self.response = None
             
     
-    def setHeadersAuthVariable(self, device_id, session_id, authorization) :
+    def setHeadersAuthVariable(self, device_id, session_id) :
         self.headers['device_id'] = device_id
         self.headers['session_id'] = session_id
-        self.headers['authorization'] = authorization
 
     def getResponse(self) :
         if(self.response == None):

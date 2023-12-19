@@ -15,7 +15,7 @@ class BrowseQueryHandling(QueryHandling) :
             self.getResponse()
         data = self.getResponse()['data']['browse']['results']['edges']
 
-        self.productsId = [data[i]['node']['urlKey'] for i in range(self.data['variables']['page']['limit'])]
+        self.productsId = [data[i]['node']['urlKey'] for i in range(len(data))]
         return self.productsId
         
     def setSearch(self, search, size=1, currency="GB", country="GDP") :
@@ -30,9 +30,14 @@ class BrowseQueryHandling(QueryHandling) :
 
 def main(args):
     test = BrowseQueryHandling()
-    test.setSearch("nike",100)
-    test.writeProductId("nike")
+    test.data['variables']
+    test.setSearch("adidas yeezy boost",100)
+    test.writeProductId("adidas-yeezy-boost")
     
 if __name__ == '__main__':
     args = sys.argv[1:]
     sys.exit(main(args))
+
+
+# dans node market dead stock we have number sold
+# can get specific id for a particular shoe size too
