@@ -1,0 +1,1 @@
+{"errors": [{"message": "Variable \"$transactionType\" got invalid value \"SALES\"; Value \"SALES\" does not exist in \"TransactionType\" enum.", "extensions": {"code": "BAD_USER_INPUT", "traceUrl": "https://app.datadoghq.com/apm/trace/3693883758772877334"}}]}

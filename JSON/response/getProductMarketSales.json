@@ -1,0 +1,463 @@
+{
+    "data": {
+        "variant": {
+            "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+            "market": {
+                "sales": {
+                    "edges": [
+                        {
+                            "cursor": "MjAyMy0xMi0wOCAyMDoxNzozOA==",
+                            "node": {
+                                "amount": 134,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-12-08T20:17:38Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0xMC0wMSAwMzoyMDozOQ==",
+                            "node": {
+                                "amount": 119,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-10-01T03:20:39Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wNy0yOCAwNTowNzowMA==",
+                            "node": {
+                                "amount": 120,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-07-28T05:07:00Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wNi0yNCAxODo0NzowNw==",
+                            "node": {
+                                "amount": 115,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-06-24T18:47:07Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wNS0yNCAwMjo0MzoxMQ==",
+                            "node": {
+                                "amount": 118,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-05-24T02:43:11Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wNS0xMiAwMzozNTo0Ng==",
+                            "node": {
+                                "amount": 80,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-05-12T03:35:46Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMy0xNSAxNzoxNjoxNA==",
+                            "node": {
+                                "amount": 175,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-03-15T17:16:14Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMy0wNSAwMzo0NDoyMg==",
+                            "node": {
+                                "amount": 129,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-03-05T03:44:22Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMy0wNCAwNDo0Mjo1Nw==",
+                            "node": {
+                                "amount": 129,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-03-04T04:42:57Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMi0yOCAyMzo1MzoyMA==",
+                            "node": {
+                                "amount": 146,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-02-28T23:53:20Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMi0yMiAxNzoxODo1MA==",
+                            "node": {
+                                "amount": 111,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-02-22T17:18:50Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMi0xOSAxODo0MjozMw==",
+                            "node": {
+                                "amount": 106,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-02-19T18:42:33Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMi0xNSAyMjozMTozMA==",
+                            "node": {
+                                "amount": 90,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-02-15T22:31:30Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMi0wNiAwMjo0NjoyNw==",
+                            "node": {
+                                "amount": 105,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-02-06T02:46:27Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMS0zMCAyMTo0OTo0OA==",
+                            "node": {
+                                "amount": 100,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-01-30T21:49:48Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMy0wMS0yNyAxOToxMToyMQ==",
+                            "node": {
+                                "amount": 134,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2023-01-27T19:11:21Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMi0xMiAxNjo0MTo1Ng==",
+                            "node": {
+                                "amount": 143,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-12-12T16:41:56Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMi0wMiAwMzowMjowNA==",
+                            "node": {
+                                "amount": 143,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-12-02T03:02:04Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMi0wMSAyMToxNjo1Nw==",
+                            "node": {
+                                "amount": 142,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-12-01T21:16:57Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0yNSAyMjo0ODowNg==",
+                            "node": {
+                                "amount": 118,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-25T22:48:06Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0yNSAyMjo0NzowMg==",
+                            "node": {
+                                "amount": 116,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-25T22:47:02Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0xNyAxNTowMzowMg==",
+                            "node": {
+                                "amount": 118,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-17T15:03:02Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0xNSAyMTo0MjowMQ==",
+                            "node": {
+                                "amount": 90,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-15T21:42:01Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0xMiAwODozNzo0OA==",
+                            "node": {
+                                "amount": 110,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-12T08:37:48Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0xMCAxOToyNzowOQ==",
+                            "node": {
+                                "amount": 115,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-10T19:27:09Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0xMCAxMjoyNzowOQ==",
+                            "node": {
+                                "amount": 115,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-10T12:27:09Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0wOSAwMTo1MDowMw==",
+                            "node": {
+                                "amount": 118,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-09T01:50:03Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0wOCAyMToxMzowMg==",
+                            "node": {
+                                "amount": 116,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-08T21:13:02Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0wNSAyMjo1MjowNg==",
+                            "node": {
+                                "amount": 150,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-05T22:52:06Z",
+                                "orderType": "STANDARD"
+                            }
+                        },
+                        {
+                            "cursor": "MjAyMi0xMS0wNSAwMTo1NToyMA==",
+                            "node": {
+                                "amount": 165,
+                                "associatedVariant": {
+                                    "id": "8196c7f5-11f0-46aa-bd9e-75ee301d72e0",
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                "sameFees": false,
+                                "createdAt": "2022-11-05T01:55:20Z",
+                                "orderType": "STANDARD"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -3,6 +3,9 @@ import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+from datetime import date, datetime
+from dateutil.parser import parse
+from dateutil.relativedelta import relativedelta
 
 from queryClass.queryHandling import QueryHandling
 
@@ -51,6 +54,24 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
         self.salesGraph.set_index('Date', inplace=True)
         return self.salesGraph
     
+    def writeData(self, name):
+        with open("./JSON/response/" + name + ".json", 'w') as file:
+            json.dump(self.getResponse()['data'], file)
+
+    def chunkDate(startDate, endDate, intervals):
+
+        start = parse(startDate)
+        end = parse(endDate)
+
+        diff = (end - start)
+        interval_duration = diff / intervals  
+
+        
+        date_range = [start + i * interval_duration for i in range(intervals)]
+        date_range.append(datetime.strptime(endDate, '%Y-%m-%d'))
+
+        return date_range
+    
 
 def main(args):
     productIds = None
@@ -77,6 +98,10 @@ def main(args):
     plt.show()
 
 
+def main2():
+    sales = FetchSalesGraphQueryHandling("8196c7f5-11f0-46aa-bd9e-75ee301d72e0")
+    sales.writeData("fetchSalesGraph-adidas-yeezy-slide-slate-grey")
+
 if __name__ == '__main__':
     args = sys.argv[1:]
-    sys.exit(main(args))
+    sys.exit(main2())

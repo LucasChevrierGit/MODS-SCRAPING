@@ -42,3 +42,15 @@ class QueryHandling :
     def changeHeadersId(self, device_id, session_id):
         self.headers['x-stockx-device-id'] = device_id
         self.headers['x-stockx-session-id'] = session_id
+
+    def writeData(self, name):
+        with open("./JSON/response/" + name + ".json", 'w') as file:
+            json.dump(self.getResponse(), file)
+
+
+
+
+if __name__ == '__main__':
+    productPriceLvl = QueryHandling("getProductMarketSales.json")
+    productPriceLvl.getResponse()
+    productPriceLvl.writeData("getProductMarketSales")

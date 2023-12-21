@@ -25,14 +25,19 @@ class BrowseQueryHandling(QueryHandling) :
     def writeProductId(self, categoryName):
         with open("PRODUCT_ID/" + categoryName + ".json", 'w') as file:
             json.dump(self.getProductsId(), file)
+    def writeData(self, name):
+        with open("./JSON/response/" + name + ".json", 'w') as file:
+            json.dump(self.getResponse()['data'], file)
 
     
 
 def main(args):
     test = BrowseQueryHandling()
-    test.data['variables']
-    test.setSearch("adidas yeezy boost",100)
-    test.writeProductId("adidas-yeezy-boost")
+
+    test.setSearch("adidas yeezy boost",1)
+    test.getResponse()
+    test.writeData("browse-adidas-yeezy-boost-1")
+    #test.writeProductId("adidas-yeezy-boost")
     
 if __name__ == '__main__':
     args = sys.argv[1:]

@@ -6,7 +6,6 @@ from queryClass.getProductsAndInfo import getRetailPrice_ReleaseDate
 import json
 import matplotlib.pyplot as plt
 import pandas as pd
-import time 
 import math
 
 
@@ -114,9 +113,8 @@ with open("PRODUCT_ID/" + 'Jordan1' + '.json') as file:
 urlKey = productIds[0]
 print(urlKey)
 
-salesGraph = fetchSalesGraph(urlKey, intervals = 10000, currencyCode="USD")
-
-
+salesGraph = fetchSalesGraph(urlKey, intervals = 500, currencyCode="USD")
 plt.plot(salesGraph)
 plt.show()
-#salesGraph.to_csv("SALES/Jordan1/" + urlKey + ".csv")
+
+salesGraph.to_csv("SALES/variants.csv")
