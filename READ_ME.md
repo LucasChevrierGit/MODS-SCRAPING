@@ -14,9 +14,15 @@ If at some point an error message appear in your CLI, because of a negative quer
 
 ## Tree
 ./SALES : All time series are stored there
+
 ./INFO_BROSWER : The info retrieved from the browse query
+
 ./PRODUCT_ID : result from function getProductId in the browse class
+
 ./JSON
+
     ./query : the json queries used to call the stockX api
+
     ./response : some json response from different type of queries 
+    
 ./queryClass : each Class will handle each type of useful query and their response
