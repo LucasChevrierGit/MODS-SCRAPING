@@ -27,8 +27,8 @@
         "selected-country": "FR",
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "x-operation-name": "GetProductMarketSales",
-        "x-stockx-device-id": "14bdd41f-f2d3-4f59-8d4e-633b685771ee",
-        "x-stockx-session-id": "beafa0ac-7614-46c2-8f09-36c49dfb32df"
+        "x-stockx-device-id": "8cdb3ce8-f4c1-4674-94c7-02e84c675eed",
+        "x-stockx-session-id": "4ee67735-1058-41f4-bf30-2bfa6b84d451"
     },
     "data": {
         "query": "query GetProductMarketSales($productId: String!, $currencyCode: CurrencyCode, $market: String, $first: Int, $isVariant: Boolean!) {\n  product(id: $productId) @skip(if: $isVariant) {\n    id\n    market(currencyCode: $currencyCode) {\n      ...MarketSalesFragment\n    }\n  }\n  variant(id: $productId) @include(if: $isVariant) {\n    id\n    market(currencyCode: $currencyCode) {\n      ...MarketSalesFragment\n    }\n  }\n}\n\nfragment MarketSalesFragment on Market {\n  sales(first: $first, market: $market) {\n    edges {\n      cursor\n      node {\n        amount\n        associatedVariant {\n          id\n          traits {\n            size\n          }\n        }\n        sameFees\n        createdAt\n        orderType\n      }\n    }\n  }\n}",

@@ -8,8 +8,9 @@ from datetime import date, datetime
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
 import math
+import requests
 
-from queryHandling import QueryHandling
+from queryClass.queryHandling import QueryHandling
 
 """
 "productId": "adidas-yeezy-slide-slate-grey",
@@ -22,21 +23,12 @@ from queryHandling import QueryHandling
 class FetchSalesGraphQueryHandling(QueryHandling) :
     def __init__(self, productId, isVariant = False):
         super().__init__("FetchSalesGraph.json") #only open does not request 
-        self.data['variables']['productsId'] = productId
+
+        self.data['variables']['productId'] = productId
         self.data['variables']['isVariant'] = isVariant
 
         self.response = None
         self.salesGraph = None 
-
-        """
-            self.data['variables']['productsId']
-            self.data['variables']['startDate']
-            self.data['variables']['endDate']
-            self.data['variables']['intervals']
-            self.data['variables']['currencyCode']
-            self.data['variables']['isVariant']
-            self.data['variables']['startDate']
-        """
 
 
     def setBasicVariables(self, productId, startDate = "2022-12-14", endDate = "2023-12-14", intervals = 100):
@@ -49,14 +41,22 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
         self.data['variables']['currencyCode'] = currencyCode
 
     def responseAsPd(self):
-        self.setResponse()
         series = self.response['data']['product']['salesChart']['series']
-        #(' + str(self.data['variables']['currencyCode']) + ')
         self.salesGraph = pd.DataFrame(series)
         self.salesGraph = self.salesGraph.rename(columns={'xValue': 'Date', 'yValue': 'Price'})
+
         self.salesGraph['Date'] = pd.to_datetime(self.salesGraph['Date'])
         self.salesGraph.set_index('Date', inplace=True)
         return self.salesGraph
+    
+    def responseAsPdVariant(self):
+        series = self.response['data']['variant']['salesChart']['series']
+        self.salesGraph = pd.DataFrame(series)
+        self.salesGraph = self.salesGraph.rename(columns={'xValue': 'Date', 'yValue': 'Price'})
+
+        self.salesGraph['Date'] = pd.to_datetime(self.salesGraph['Date'])
+        self.salesGraph.set_index('Date', inplace=True)
+        return self.salesGraph        
     
     def writeData(self, name):
         with open("./JSON/response/" + name + ".json", 'w') as file:
@@ -65,6 +65,12 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
 
     """ 
     Created to be usefull outside the class 
+
+    intervals : number of points in the graph
+    strartDate : date of the release date (format : "YYYY-MM-DD", will check sales 1 mounth prior to the release date)
+    currencyCode : currency of the price
+
+    return : a pandas dataframe with the date as index and the price as value
     """
     def fetchSalesGraph(self, intervals, startDate ,currencyCode = "USD"):
 
@@ -75,18 +81,25 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
         self.setBasicVariables(productId, startDate= dates[0].strftime('%Y-%m-%d') , endDate= dates[1].strftime('%Y-%m-%d'), intervals= int(round(intervals/chunk)))
         self.setCurreny(currencyCode= currencyCode)
         self.setResponse()
-        salesGraph= self.responseAsPd() 
+
+        if self.data['variables']['isVariant'] == False:
+            salesGraph= self.responseAsPd() 
+        else:
+            salesGraph= self.responseAsPdVariant()
 
         for i in range(1, chunk ):
             self.setBasicVariables(productId, startDate= (dates[i] + relativedelta(days = 1)).strftime('%Y-%m-%d') , endDate= dates[i + 1].strftime('%Y-%m-%d'), intervals= int(round(intervals/chunk)))
             self.setCurreny(currencyCode= currencyCode)
             self.setResponse()
-            salesGraph = pd.concat([salesGraph,self.responseAsPd()]) 
+            if self.data['variables']['isVariant']:
+                salesGraph = pd.concat([salesGraph,self.responseAsPdVariant()]) 
+            else:
+                salesGraph= pd.concat([salesGraph,self.responseAsPd()]) 
 
-        print(salesGraph.shape)
+        print('Number of points fetched :' , salesGraph.shape[0])
         return salesGraph
 
-    def chunkDate(startDate, endDate, intervals):
+    def chunkDate(self, startDate, endDate, intervals):
 
         start = parse(startDate)
         end = parse(endDate)

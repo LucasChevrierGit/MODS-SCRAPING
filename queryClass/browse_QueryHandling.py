@@ -2,7 +2,7 @@ import sys
 import requests
 import json
 import pandas as pd
-from queryHandling import QueryHandling
+from queryClass.queryHandling import QueryHandling
 
 
 
@@ -89,7 +89,7 @@ def main(args):
     test.getResponse()
 
     df = test.getInfo_DF()
-    
+
     """ Save most of the data from the browser query as csv """
     df.to_csv('./INFO_BROWSE/adidas-yeezy-boost-350_10.csv')
 

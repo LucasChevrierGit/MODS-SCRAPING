@@ -37,12 +37,13 @@ class QueryHandling :
         return self.response
     
     def setResponse(self) :
-        self.response = requests.post(self.url, cookies=self.cookies, headers=self.headers, json=self.data)
+        self.response = requests.post(self.url, cookies=self.cookies, headers=self.headers, json= self.data)
         print(self.operationName + " query, status code :",self.response.status_code)
         if(self.response.status_code == 200):
             self.response = self.response.json()
         else:
             print(" Wrong status code for " + self.operationName + ", might be a problem with the authorization variable in headers")
+            print(self.response)
             response = input('Check on stockX.com if there is a capcha. type "yes" to retry')
             if response == "yes":
                 self.response = self.getResponse()
