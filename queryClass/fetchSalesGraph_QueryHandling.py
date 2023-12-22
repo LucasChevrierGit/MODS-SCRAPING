@@ -1,13 +1,15 @@
 import json
 import sys
+from tracemalloc import start
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from datetime import date, datetime
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
+import math
 
-from queryClass.queryHandling import QueryHandling
+from queryHandling import QueryHandling
 
 """
 "productId": "adidas-yeezy-slide-slate-grey",
@@ -18,9 +20,10 @@ from queryClass.queryHandling import QueryHandling
 "isVariant": false
 """
 class FetchSalesGraphQueryHandling(QueryHandling) :
-    def __init__(self, productId):
+    def __init__(self, productId, isVariant = False):
         super().__init__("FetchSalesGraph.json") #only open does not request 
         self.data['variables']['productsId'] = productId
+        self.data['variables']['isVariant'] = isVariant
 
         self.response = None
         self.salesGraph = None 
@@ -46,17 +49,42 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
         self.data['variables']['currencyCode'] = currencyCode
 
     def responseAsPd(self):
-        series = self.getResponse()['data']['product']['salesChart']['series']
-
+        self.setResponse()
+        series = self.response['data']['product']['salesChart']['series']
+        #(' + str(self.data['variables']['currencyCode']) + ')
         self.salesGraph = pd.DataFrame(series)
-        self.salesGraph = self.salesGraph.rename(columns={'xValue': 'Date', 'yValue': 'Price (' + str(self.data['variables']['currencyCode']) + ')'})
+        self.salesGraph = self.salesGraph.rename(columns={'xValue': 'Date', 'yValue': 'Price'})
         self.salesGraph['Date'] = pd.to_datetime(self.salesGraph['Date'])
         self.salesGraph.set_index('Date', inplace=True)
         return self.salesGraph
     
     def writeData(self, name):
         with open("./JSON/response/" + name + ".json", 'w') as file:
-            json.dump(self.getResponse()['data'], file)
+            self.setResponse()
+            json.dump(self.response['data'], file)
+
+    """ 
+    Created to be usefull outside the class 
+    """
+    def fetchSalesGraph(self, intervals, startDate ,currencyCode = "USD"):
+
+        chunk = math.floor(intervals // 500) + 1
+        dates = self.chunkDate(startDate, str(date.today()), chunk)
+
+        productId = self.data['variables']['productId']
+        self.setBasicVariables(productId, startDate= dates[0].strftime('%Y-%m-%d') , endDate= dates[1].strftime('%Y-%m-%d'), intervals= int(round(intervals/chunk)))
+        self.setCurreny(currencyCode= currencyCode)
+        self.setResponse()
+        salesGraph= self.responseAsPd() 
+
+        for i in range(1, chunk ):
+            self.setBasicVariables(productId, startDate= (dates[i] + relativedelta(days = 1)).strftime('%Y-%m-%d') , endDate= dates[i + 1].strftime('%Y-%m-%d'), intervals= int(round(intervals/chunk)))
+            self.setCurreny(currencyCode= currencyCode)
+            self.setResponse()
+            salesGraph = pd.concat([salesGraph,self.responseAsPd()]) 
+
+        print(salesGraph.shape)
+        return salesGraph
 
     def chunkDate(startDate, endDate, intervals):
 
@@ -73,6 +101,9 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
         return date_range
     
 
+
+    
+
 def main(args):
     productIds = None
     with open("PRODUCT_ID/" + 'nike.json') as file:
@@ -84,14 +115,13 @@ def main(args):
     for i in range(5):
 
         df = salesGraphs[i].responseAsPd()
-        df['xValue'] = pd.to_datetime(df['xValue'])
 
         # Adding labels and title
         plt.xlabel('Date')
         plt.ylabel('Price in ' + str(salesGraphs[i].data['variables']['currencyCode']) )
         plt.title('Sales Chart')
 
-        plt.plot(df['xValue'], df['yValue'], marker='o', linestyle='-', label = salesGraphs[i].data['variables']['productsId'])  # Plot xValue on x-axis, yValue on y-axis
+        plt.plot(df.index, df['Price'], marker='o', linestyle='-', label = salesGraphs[i].data['variables']['productsId'])  # Plot xValue on x-axis, yValue on y-axis
         plt.legend()
 
 

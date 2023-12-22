@@ -26,7 +26,13 @@ class QueryHandling :
                 self.response = self.response.json()
                 return self.response
             else:
-                raise Exception(" Wrong status code, might be a problem with the authorization variable in headers")
+                print(" Wrong status code for " + self.operationName + ", might be a problem with the authorization variable in headers")
+                response = input('Check on stockX.com if there is a capcha. type "yes" to retry')
+                if response == "yes":
+                    self.response = None
+                    return self.getResponse()
+                else :
+                    raise Exception("Problem not solved")
             
         return self.response
     
@@ -36,7 +42,12 @@ class QueryHandling :
         if(self.response.status_code == 200):
             self.response = self.response.json()
         else:
-            raise Exception(" Wrong status code, might be a problem with the authorization variable in headers")
+            print(" Wrong status code for " + self.operationName + ", might be a problem with the authorization variable in headers")
+            response = input('Check on stockX.com if there is a capcha. type "yes" to retry')
+            if response == "yes":
+                self.response = self.getResponse()
+            else :
+                raise Exception("Problem not solved")
         
     
     def changeHeadersId(self, device_id, session_id):

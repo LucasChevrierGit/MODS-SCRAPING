@@ -1,0 +1,298 @@
+{
+    "browse": {
+        "suggestions": {
+            "isCuratedPage": false,
+            "relatedPages": [],
+            "locales": []
+        },
+        "results": {
+            "edges": [
+                {
+                    "objectId": "3491a282-a9d4-4864-b3cd-298a214381a8",
+                    "node": {
+                        "id": "3491a282-a9d4-4864-b3cd-298a214381a8",
+                        "favorite": null,
+                        "product": {
+                            "id": "e4b11157-0d0f-4fec-aa15-6e51603307ba",
+                            "name": "Bone",
+                            "urlKey": "adidas-yeezy-boost-350-v2-bone",
+                            "title": "adidas Yeezy Boost 350 V2 Bone",
+                            "brand": "adidas",
+                            "description": "The adidas Yeezy Boost 350 V2 Bone features a triple white Primeknit upper with mesh side stripes and canvas heel tabs. At the base, a semi-translucent sole with Boost technology completes the design.\n<br>\n<br>\nThe adidas Yeezy Boost 350 V2 Bone released in March of 2022 and retailed for $230.",
+                            "model": "adidas Yeezy Boost 350 V2",
+                            "condition": "New",
+                            "productCategory": "sneakers",
+                            "listingType": "STANDARD",
+                            "gender": "men",
+                            "browseVerticals": [
+                                "sneakers"
+                            ],
+                            "media": {
+                                "thumbUrl": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Pure-Oat-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1703084179",
+                                "smallImageUrl": "https://images.stockx.com/images/adidas-Yeezy-Boost-350-V2-Pure-Oat-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1703084179"
+                            },
+                            "favorite": null,
+                            "variants": [
+                                {
+                                    "id": "364ca32e-4565-4ff2-9b51-091d3c2c083a",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "4"
+                                    }
+                                },
+                                {
+                                    "id": "04a17d8f-3e4c-448d-b058-0744bfeefbc5",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "4.5"
+                                    }
+                                },
+                                {
+                                    "id": "a9e34a9b-e562-4759-82eb-c34ffd384d3b",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "5"
+                                    }
+                                },
+                                {
+                                    "id": "84488b07-5f47-4ebe-ab20-cf326923cee7",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "5.5"
+                                    }
+                                },
+                                {
+                                    "id": "bf588b0e-4b51-49d3-9415-cd65f4160389",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "6"
+                                    }
+                                },
+                                {
+                                    "id": "5e59becc-fc14-4220-b76b-5f82c2c8570d",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "6.5"
+                                    }
+                                },
+                                {
+                                    "id": "c47e64b4-5598-46bd-9cd6-5629dea484c6",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "7"
+                                    }
+                                },
+                                {
+                                    "id": "ed801ecf-3e9b-45d5-84d4-4230f1626bb0",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "7.5"
+                                    }
+                                },
+                                {
+                                    "id": "fad3f342-811a-4ca2-a31c-865ce9d51cb3",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "8"
+                                    }
+                                },
+                                {
+                                    "id": "88796ebb-1237-4c32-b6fd-973704ccaf13",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "8.5"
+                                    }
+                                },
+                                {
+                                    "id": "8ab5ed38-51ad-460e-b675-485229fcb1ba",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "9"
+                                    }
+                                },
+                                {
+                                    "id": "1713b123-6dd8-4bee-b63f-6e9b6bd04b52",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "9.5"
+                                    }
+                                },
+                                {
+                                    "id": "461f8a89-aae3-4b5d-a0b9-1f385c988f80",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "10"
+                                    }
+                                },
+                                {
+                                    "id": "45c6d5b9-dc42-462f-aefe-2f40d2d50145",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "10.5"
+                                    }
+                                },
+                                {
+                                    "id": "3491a282-a9d4-4864-b3cd-298a214381a8",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "11"
+                                    }
+                                },
+                                {
+                                    "id": "b86267c1-4def-4e18-9fb7-a90a4b831e06",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "11.5"
+                                    }
+                                },
+                                {
+                                    "id": "57a1b3db-c1ff-4444-a831-5c0d01b9c8e1",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "12"
+                                    }
+                                },
+                                {
+                                    "id": "71b19869-b80a-4880-8ec7-d6ca846016ff",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "12.5"
+                                    }
+                                },
+                                {
+                                    "id": "861d7aab-2744-4bab-a58d-92d44a369372",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "13"
+                                    }
+                                },
+                                {
+                                    "id": "a5113305-887f-47fa-bcf9-bc4705469bf6",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "13.5"
+                                    }
+                                },
+                                {
+                                    "id": "fcb6bdd3-9ca9-48ef-b6ca-2b1165d527ce",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "14"
+                                    }
+                                },
+                                {
+                                    "id": "58fb80f6-aeaf-47d8-bc0e-916b35714d5c",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "14.5"
+                                    }
+                                },
+                                {
+                                    "id": "d799931b-08e0-4d40-92b4-082fe29807d5",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "15"
+                                    }
+                                },
+                                {
+                                    "id": "343e458b-e123-4ec3-ac69-322dd428feb4",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "16"
+                                    }
+                                },
+                                {
+                                    "id": "f439f6f0-0448-4c60-a9b5-4d8a375d3011",
+                                    "hidden": false,
+                                    "favorite": null,
+                                    "traits": {
+                                        "size": "17"
+                                    }
+                                }
+                            ],
+                            "traits": [
+                                {
+                                    "name": "Retail Price",
+                                    "value": "230"
+                                },
+                                {
+                                    "name": "Release Date",
+                                    "value": "2022-03-21"
+                                }
+                            ]
+                        },
+                        "market": {
+                            "currencyCode": "USD",
+                            "state": {
+                                "numberOfCustodialAsks": 25,
+                                "lowestAsk": {
+                                    "amount": 250,
+                                    "updatedAt": "2023-12-20T16:16:39Z"
+                                },
+                                "highestBid": {
+                                    "amount": 218,
+                                    "updatedAt": "2023-12-21T09:27:47Z"
+                                }
+                            },
+                            "salesInformation": {
+                                "lastSale": 250,
+                                "lastSaleDate": "2023-12-22T04:25:35Z",
+                                "salesThisPeriod": 13,
+                                "salesLastPeriod": 26,
+                                "changeValue": -47,
+                                "changePercentage": -0.158249,
+                                "volatility": 0.106019,
+                                "pricePremium": 0.087
+                            },
+                            "deadStock": {
+                                "sold": 1947,
+                                "averagePrice": 241
+                            },
+                            "statistics": {
+                                "last90Days": {
+                                    "averagePrice": 217
+                                }
+                            }
+                        },
+                        "traits": {
+                            "size": "11"
+                        }
+                    }
+                }
+            ],
+            "pageInfo": {
+                "limit": 1,
+                "page": 1,
+                "pageCount": null,
+                "queryId": "4f903aa761b397ca181e61aa936b3591",
+                "queryIndex": "PRODUCTION_PG_FEATURED_DESC",
+                "total": 1
+            }
+        },
+        "query": "adidas-yeezy-boost-350-v2-bone"
+    }
+}
