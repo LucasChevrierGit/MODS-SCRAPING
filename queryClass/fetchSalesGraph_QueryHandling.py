@@ -50,6 +50,9 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
         return self.salesGraph
     
     def responseAsPdVariant(self):
+        if self.response['data']['variant']['salesChart'] == None :
+            print("No data for this variant")
+            return None
         series = self.response['data']['variant']['salesChart']['series']
         self.salesGraph = pd.DataFrame(series)
         self.salesGraph = self.salesGraph.rename(columns={'xValue': 'Date', 'yValue': 'Price'})
@@ -95,7 +98,7 @@ class FetchSalesGraphQueryHandling(QueryHandling) :
                 salesGraph = pd.concat([salesGraph,self.responseAsPdVariant()]) 
             else:
                 salesGraph= pd.concat([salesGraph,self.responseAsPd()]) 
-
+        
         print('Number of points fetched :' , salesGraph.shape[0])
         return salesGraph
 

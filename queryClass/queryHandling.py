@@ -21,7 +21,7 @@ class QueryHandling :
     def getResponse(self) :
         if(self.response == None):
             self.response = requests.post(self.url, cookies=self.cookies, headers=self.headers, json=self.data)
-            print(self.operationName + " query, status code :",self.response.status_code)
+            #print(self.operationName + " query, status code :",self.response.status_code)
             if(self.response.status_code == 200):
                 self.response = self.response.json()
                 return self.response
@@ -38,7 +38,7 @@ class QueryHandling :
     
     def setResponse(self) :
         self.response = requests.post(self.url, cookies=self.cookies, headers=self.headers, json= self.data)
-        print(self.operationName + " query, status code :",self.response.status_code)
+        #print(self.operationName + " query, status code :",self.response.status_code)
         if(self.response.status_code == 200):
             self.response = self.response.json()
         else:

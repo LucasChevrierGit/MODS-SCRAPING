@@ -48,8 +48,8 @@ class BrowseQueryHandling(QueryHandling) :
     
     def getInfo_DF(self):
 
+        self.setResponse()
         resp = self.getResponse()['data']['browse']['results']['edges']
-
         ids = []  
         url_keys = []
         retailPrice = []
@@ -57,13 +57,26 @@ class BrowseQueryHandling(QueryHandling) :
         variants = []
         sold = []
         averagePrice = []
+        image = ""
 
         for shoe in resp :
             ids.append(shoe["objectId"])
             node = shoe["node"]
             url_keys.append(node['urlKey'])
-            retailPrice.append(node["productTraits"][0]["value"])
-            releaseDate.append(node["productTraits"][1]["value"])
+
+            image = node['media']['thumbUrl']
+
+            index = image.find(".jpg")
+            image = image[:index + len(".jpg")]
+            if len(node["productTraits"]) != 2 :
+                print("WARNING : " + node['urlKey'] + " has less than 2 product traits")
+                print(node["productTraits"])
+                retailPrice.append(node["productTraits"][0]["value"])
+                releaseDate.append(None)
+                print(node)
+            else :
+                retailPrice.append(node["productTraits"][0]["value"])
+                releaseDate.append(node["productTraits"][1]["value"])
             variants.append( { variant['traits']['size'] : variant['id']  for variant in node['variants']})
             sold.append( node['market']['deadStock']['sold'])
             averagePrice.append( node['market']['deadStock']['averagePrice'])
@@ -73,9 +86,11 @@ class BrowseQueryHandling(QueryHandling) :
             'URL Key': url_keys,
             'retail Price': retailPrice,
             'release Date': releaseDate,
-            'Variants': variants,
             'sold' : sold,
-            'average price' : averagePrice
+            'average price' : averagePrice,
+            'image' : image,
+            'Variants': variants
+
         }
         return pd.DataFrame(data)
 
