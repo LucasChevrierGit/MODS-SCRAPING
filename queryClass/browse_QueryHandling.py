@@ -12,10 +12,16 @@ class BrowseQueryHandling(QueryHandling) :
         self.productsId = None
     
     """ 
-    Can check ald sort id type in JSON\response\browseSort.json 
-    adding shoe size modify the returned json, don't try getProductId with it 
+    Set the parameter in the JSON query 
+    
+    search : the element you want to search on stockX (ie : 'nike air max')
+    size : Number of shoe pair the query returns
+    gender : ""/"men"/"women"
+    years : release date of the shoes 
+    sort ID : Can check all sort id type in JSON\response\browseSort.json 
+    shoeSize : adding shoe size modify the returned json, don't try getProductId with it ( shoeSize = ['9.5'])
     """
-    def setSearch(self, search, size=1, gender = "men", years = ["2021","2022"], sortID = "featured", shoeSize = []) :
+    def setSearch(self, search, size=1, gender = "men", years = ["2021","2022"], sortID = "featured", shoeSize = ['']) :
         self.data['variables']['query'] = search
         self.data['variables']['page']['limit'] = size
         self.data['variables']['filters'][1]['selectedValues'][0] = gender
