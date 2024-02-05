@@ -1,3 +1,8 @@
+
+
+## pynb
+The pynb file are a good way to understand the structure of this repository
+
 ## StockX API
 In ./JSON/query/*, only those 2 variables in header need to be changed :
 
