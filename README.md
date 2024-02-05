@@ -13,7 +13,10 @@ Cookies are useless, and other header variable might be useless too
 
 Need to inspect whatever page on stockX, in network fetch/XHR, get a query (named e in chrome) and retrieve this 2 variables using "copy as curl" and past into curlconverter.com
 
-You can use the headerChange function from class queryHandling to change device and session id variables or simply change them manually 
+
+You can use the headerChange function from class queryHandling to change device and session id variables or simply change them manually for every json query you will be using
+
+![inspect](inspect.png)
 
 If at some point an error message appear in your CLI, because of a negative query response (" Wrong status code for XXX, might be a problem with the authorization variable in headers. Check on stockX.com if there is a capcha. type "yes" to retry"). You might want to look for a capcha in the stockX website (they ask you to click on a button to check you are not a bot. After doing that you can type "yes" in the CLI (does not work))
 
