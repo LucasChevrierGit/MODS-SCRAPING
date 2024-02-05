@@ -18,7 +18,7 @@ You can use the headerChange function from class queryHandling to change device 
 
 ![inspect](inspect.png)
 
-If at some point an error message appear in your CLI, because of a negative query response (" Wrong status code for XXX, might be a problem with the authorization variable in headers. Check on stockX.com if there is a capcha. type "yes" to retry"). You might want to look for a capcha in the stockX website (they ask you to click on a button to check you are not a bot. After doing that you can type "yes" in the CLI (does not work))
+If at some point an error message appear in your CLI, because of a negative query response (" Wrong status code for XXX, might be a problem with the authorization variable in headers. Check on stockX.com if there is a capcha. type "yes" to retry"). You might want to look for a capcha in the stockX website (reload the page if no captcha is visible - they ask you to click on a button to check you are not a bot). Doing that allows you to keep sending query with the same ids, otherwise, you'll have to change them.
 
 ![Captcha](captcha.png)
 
